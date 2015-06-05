@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" ng-app="whereApp">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Setting the right viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<title>Nimbus</title>
+  
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/map-icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.icon-large.min.css">
+  
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	
+	<!-- We use client cookies to save the user credentials -->
+	<script src="js/angular-cookies.min.js"></script>
+
+	<!-- Auth0 Lock script and AngularJS module -->
+	<script src="js/lock-7.1.min.js"></script>
+	<!-- angular-jwt and angular-storage -->
+	<script type="text/javascript" src="js/angular-storage.js"></script>
+	<script type="text/javascript" src="js/angular-jwt.js"></script>
+	<script src="js/auth0-angular-4.js"> </script>
+	
+	<script src="js/ng-map.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+	
+	<script src="js/map-icons.min.js"></script>
+	<script src="js/auth.js?onload=init"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/spin.min.js"></script>
+	<script src="js/angular-spinner.min.js"></script>
+	<script src="js/angular-loading-spinner.js"></script>
+	<script src="js/directives.js"></script>
+	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jasny-bootstrap.min.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/angularfire.min.js"></script>
+	
+	
+</head>
+<body>
+
+	<div id="main-controller" ng-controller="HeaderCtrl">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<p class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu">
+				<span class="sr-only">Toggle Menu</span>
+				<img class="glyphicon-profile" src="{{profile_picture}}" />
+			</p>
+		
+			<a class="navbar-brand pull-right" href="#/map/" ><img src="img/NIMBUS-logo(3).png"/></a>
+			<div class="tabbable">
+				<ul class="nav nav-tabs nav-justified">
+					<li ng-class="{ active: isActive('/map')}"><a href="#/map/"><span class='glyphicon glyphicon-cloud'></span></a></li>
+					<li ng-class="{ active: isActive('/contacts')}"><a href="#/contacts/"><span class='glyphicon glyphicon-user'></span></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<div id="view-container" class="container">
+			<div us-spinner spinner-key="spinner-1"></div> 
+			<div id="search-controls" class="container-fluid"> 	
+				<div id="ng-view" ng-view></div>
+			</div>
+		</div>
+
+		<div class="navmenu navmenu-inverse navmenu-fixed-left offcanvas-sm">
+			<ul class="nav navmenu-nav">
+				<span class="sr-only">Log Out</span>
+				<li><a ng-click="logout()" href=""><span class="glyphicon glyphicon-lock"></span> Log Out</a></li>	
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

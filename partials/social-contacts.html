@@ -1,0 +1,27 @@
+
+<div class="input-group">
+	<span class="input-group-addon">
+		<span class="glyphicon glyphicon-search"></span>
+	</span>
+	<input ng-model="query" type="text" class="form-control" placeholder="Search">
+	<span class="input-group-btn">
+		<a href="#/contacts" class="btn btn-primary form-control" role="button"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	</span>
+</div><br/>
+<div class="row" ng-init="initialiseSocialContacts()" ng-controller="SocialContactsCtrl">
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat="contact in googleContacts | filter:query | orderBy:orderProp" >
+		<div class="row">
+			<span class="pull-left">
+				<p><img class="glyphicon-profile" src="{{contact.icon}}" /><span class="space-l5">{{contact.name}}</span></p>			
+			</span>
+			<span class="pull-right">
+				<a class="btn btn-primary form-control" role="button">{{btn_text}}</a>				
+			</span>
+			<p  class="pull-right"><small>{{status}}</small></p>
+		</div>
+		
+	</li>
+</ul>
+</div>
+

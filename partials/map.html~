@@ -1,0 +1,14 @@
+	
+<div id="map-controller" ng-controller="MapCtrl">
+	<div>
+		<a class="map-control" ng-click="followMe()"><img class="glyphicon-profile glyphicon-profile-btn" ng-class="{ active: isBtnActive(user_id)}" src="{{profile_picture}}" /></a>
+		<a class="map-control" ng-repeat="(id, contact) in contacts | sharingFilter: 2" ng-click="followContact(contact.id)"><img class="glyphicon-profile glyphicon-profile-btn" ng-class="{ active: isBtnActive(contact.id)}" src="{{contact.icon}}" /></a>
+	</div>
+	<br/>
+
+	
+	<div style="width: 100%; height: 50%;" id="map_canvas" >
+		<map zoom="15" style="width: 100%; height: 800px;" >
+		</map>
+	</div>
+</div>
