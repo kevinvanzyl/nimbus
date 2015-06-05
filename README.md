@@ -52,9 +52,12 @@ Go back to your **Google Console** credentials and set it in **Javascript Origin
 
 # **Future direction**
 
-I will be working on this continuously and will be adding more social providers like Facebook and Twitter.
-I will also be rebuilding the UI with Ionic and adding customizations for users.
-I will be adding authentication for firebase and rules.
-Lastly on my to do list will be some optimizations, cleanup and refactoring as I learn more about AngularJS. Changing the setup to bower oriented. I also want to integrate a testing framework.
 
-When it is at this point and ready for new features I will rather fork it into a new project and keep it as a minimal base for others to build onto.
+* I will be working on this continuously and will be adding more social providers like Facebook and Twitter.
+* I will also be rebuilding the UI with Ionic and adding customizations for users.
+* I will be adding authentication for firebase and rules.
+* I will also be doing some optimizations, cleanup and refactoring as I learn more about AngularJS.
+* I want to use bower and I also want to integrate a testing framework.
+* Phonegap / Cordova
+
+So it is still quite young. 
