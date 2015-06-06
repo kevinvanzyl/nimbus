@@ -1,9 +1,0 @@
-{
-  "firebase": "nimbussystems",
-  "public": ".",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}
