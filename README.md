@@ -44,7 +44,7 @@ Setup the data as below.
 Open **application/js/app.js**
 Find **nimbus.value('firebaseBase, ...** and set it to your firebase endpoint.
 
-**Hosting:** Follow ![these instructions](https://www.firebase.com/docs/hosting/quickstart.html) to host on Firebase. 
+**Hosting:** Follow [these instructions](https://www.firebase.com/docs/hosting/quickstart.html) to host on Firebase. 
 Go back to **auth0** application settings and change **Allowed Callback URLs** accordingly.
 Go back to your **Google Console** credentials and set it in **Javascript Origins** as well.
 
